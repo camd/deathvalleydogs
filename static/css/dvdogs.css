@@ -1,0 +1,439 @@
+/* basic elements */ 
+
+	body { 
+		font-style: normal; 
+		font-variant: normal; 
+		font-weight: normal; 
+		font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif; 
+		background-color: #7e8b4e;  
+		margin: 0;
+		padding: 0;
+	}
+
+	p   { 
+		font-style: normal; 
+		font-variant: normal; 
+		font-weight: normal; 
+		font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif; 
+		text-align: left 
+	} 
+
+	a:link { 
+		color: black; 
+		font-weight: bold; 
+		text-decoration: underline
+	} 
+ 
+	a:visited { 
+		color: black; 
+		text-decoration: underline 
+	}
+  
+	a:hover, a:active  { 
+		color: green; 
+		text-decoration: none 
+	} 
+
+	th  { 
+	  color: beige;
+		background-color: maroon; 
+		border-top: 3px none; 
+		border-right: 3px none; 
+		border-bottom: 2px none black 
+	}
+	
+	td.nav { 
+		vertical-align: top 
+	}
+
+	h2 { 
+		color: maroon 
+	}
+
+	table { 
+		padding: 5px 
+	}
+
+	.nopad {
+		border-collapse: collapse;
+		padding: 0px
+	}
+
+/* Tabs */
+
+  #mainImageHeader {
+    background-color: black;
+    background-image: url('../images/dvdogs_header_200.png');
+    background-repeat: no-repeat;
+    height: 190px;
+    position: relative;
+	width: 100%;
+  }
+  
+  #header {
+    vertical-align: bottom;
+    bottom: 0;
+    position: absolute;
+    float: left;
+    padding-left: 1em;
+  }
+  
+  #userAuthLinks {
+    vertical-align: bottom;
+    bottom: 0;
+    position: absolute;
+    margin-left: 450px;
+  }
+
+  #userAuthLinks a {
+    color: beige;
+  }
+
+	#header ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+	
+	#header li {
+		display: inline;
+		margin: 0 2px 0 0;
+	}
+	
+	.tab a {
+		text-decoration: none;
+		color: #a80;
+		background: beige;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    -webkit-border-radius-topleft: 5px; 
+    -webkit-border-radius-topright: 5px; 
+    border-top-left-radius: 5px; 
+    border-top-right-radius: 5px; 
+
+    padding: 0 8px 0 8px;
+	}
+
+	.link_away a {
+		text-decoration: none;
+		color: beige;
+		background: #7e8b4e;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px; 
+    border-radius: 5px; 
+    padding: 0 8px 0 8px;
+	}
+	
+	#header a:hover {
+		background: #fc0;
+		color: #540;
+    -moz-border-radius-topleft: 10px;
+    -moz-border-radius-topright: 10px;
+    -webkit-border-radius-topleft: 10px; 
+    -webkit-border-radius-topright: 10px; 
+    border-top-left-radius: 10px; 
+    border-top-right-radius: 10px; 
+    padding: 4px 8px 0 8px;
+
+	}0123456789a
+
+	.link_away a:hover {
+		background: #fc0;
+		color: #540;
+	    -moz-border-radius: 5px;
+	    -webkit-border-radius: 5px; 
+	    border-radius: 5px; 
+	    padding: 0 8px 0 8px;
+	}0123456789a
+	
+	#header .selected_tab {
+	}
+
+	.selected_tab a {
+		padding: 0 1em;
+		text-decoration: none;
+		font-weight: bold;
+		color: beige;
+		background: maroon;
+    -moz-border-radius-topleft: 10px;
+    -moz-border-radius-topright: 10px;
+    -webkit-border-radius-topleft: 10px; 
+    -webkit-border-radius-topright: 10px; 
+    border-top-left-radius: 10px; 
+    border-top-right-radius: 10px; 
+    padding: 4px 8px 0 8px;
+		
+	}
+
+/* Page content beneath tabs */
+		
+	#content {
+    clear: both;
+	border-top: 5px solid maroon;
+    background-image: url('../images/tile-topo-blk-trans.png');
+    background-repeat: repeat;
+    align: center;
+	}
+	
+	#content_center {
+    background-color: #7e8b4e;  
+    width: 750px;
+    align: center;
+    text-align: left;
+    margin: 0 auto;
+    padding: 5px;	  
+	}
+
+	.dateCircle {
+		background-color: black;
+	}
+	
+  #map_canvas {
+    width:740px;
+    height:400px;
+  }
+  
+  h1 {
+    color: beige;
+    background: black;
+    -moz-border-radius-bottomleft: 10px;
+    -moz-border-radius-bottomright: 10px;
+    -webkit-border-radius-bottomleft: 10px; 
+    -webkit-border-radius-bottomright: 10px; 
+    border-bottom-left-radius: 10px; 
+    border-bottom-right-radius: 10px; 
+    padding: 10px 5px 10px 15px;
+    margin-top: 0;
+  }
+	
+  .showTitleObject {
+    color: beige;
+    background: black;
+    -moz-border-radius-bottomleft: 10px;
+    -moz-border-radius-bottomright: 10px;
+    -webkit-border-radius-bottomleft: 10px; 
+    -webkit-border-radius-bottomright: 10px; 
+    border-bottom-left-radius: 10px; 
+    border-bottom-right-radius: 10px; 
+    padding: 10px 5px 10px 15px;
+    font-size: xx-large;
+  }
+  
+  .showTitleObject a {
+    color: beige;
+    font-size: xx-large;
+  }
+
+	/* hike story content */
+	
+	.singleStory {
+    clear: both;
+	}
+
+  .shortDescriptionTextArea {
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px; 
+    border-radius: 15px; 
+    border: 3px solid maroon;
+    padding: 12px;
+    background: beige;
+    color: black;
+    clear: both;
+    height: 100%;
+    width: 250px;
+   }
+
+  .roundedTextArea {
+    -moz-border-radius-bottomleft: 15px;
+    -moz-border-radius-bottomright: 15px;
+    -webkit-border-radius-bottonleft: 15px; 
+    -webkit-border-radius-bottomright: 15px; 
+    border-bottom-left-radius: 15px; 
+    border-bottom-right-radius: 15px; 
+    border: 5px solid maroon;
+    padding: 12px;
+    background: beige;
+    color: black;
+    clear: both;
+    width: 400px;
+    font-size: small;
+   }
+  
+  .roundedTextAreaHeightFixer {
+    height:50px;
+    float:right;
+    width:1px;
+  }
+
+  .hikeListForTripList {
+	width: 150px;
+  }
+
+  .storyListForTripList {
+	width: 200px;
+  }
+
+  .roundedTitleArea {
+    border-top-left-radius: 15px; 
+    border-top-right-radius: 15px; 
+    -moz-border-radius-topleft: 15px;
+    -moz-border-radius-topright: 15px;
+    -webkit-border-radius-topleft: 15px; 
+    -webkit-border-radius-topright: 15px; 
+    padding: 8px;
+    background: maroon;
+    color: beige;
+    width: 418px;
+  }
+
+  .clear { 
+	clear: both; 
+    height:1px;
+    overflow:hidden;
+  }
+
+  
+  .roundedTitleArea a:link { 
+    color: beige; 
+    font-weight: bold; 
+    text-decoration: underline
+  } 
+ 
+  .roundedTitleArea a:visited { 
+    color: beige; 
+    text-decoration: underline 
+  }
+
+/* Dog Cubes */
+  .dogCube {
+    border-radius: 15px;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    background: black; 
+    border: 5px solid maroon;
+    width: 130px;
+    float:left;
+    margin: 5px;
+  }
+
+  .dogName {
+    clear: both;
+    text-align:center;
+    vertical-align: middle;
+  }
+
+  .dogName a:link { 
+    color: beige; 
+    font-weight: bold; 
+    text-decoration: none
+    padding: 3px;
+  } 
+ 
+  .dogName a:visited { 
+    color: beige; 
+    text-decoration: none 
+  }
+
+  .dogThumb {
+    float: left;
+    border-top-left-radius: 10px; 
+    -moz-border-radius-topleft: 10px;
+    -webkit-border-radius-topleft: 10px; 
+  }
+
+  .dogPrint {
+    float: right;
+    margin: 15px;
+  }
+
+  .centeredPrint {
+    text-align:center;
+    vertical-align:middle;
+  }
+  
+  .dogCubeContainer {
+    column-count: 3;
+  }
+
+/* Rig Cubes */
+  .rigCube {
+    border-radius: 15px; 
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    background: black; 
+    border: 5px solid maroon;
+    width: 130px;
+    float:left;
+    margin: 5px;
+  }
+
+  .rigName {
+    clear: both;
+    text-align:center;
+    vertical-align: middle;
+  }
+
+  .rigName a:link { 
+    color: beige; 
+    font-weight: bold; 
+    text-decoration: none
+    padding: 3px;
+  } 
+ 
+  .rigName a:visited { 
+    color: beige; 
+    text-decoration: none 
+  }
+
+  .rigThumb {
+    text-align: center;
+    border-top-left-radius: 10px; 
+    -moz-border-radius-topleft: 10px;
+    -webkit-border-radius-topleft: 10px; 
+  }
+
+  .rigCubeContainer {
+    column-count: 3;
+  }
+
+
+/* Tables */
+.maroonRoundedBorder {
+  border-radius: 15px; 
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px; 
+  border: 5px solid maroon;
+}
+
+.firstHorizontalColumnHeader{
+  border-top-left-radius: 8px; 
+  -moz-border-radius-topleft: 8px;
+  -webkit-border-radius-topleft: 8px;
+  padding: 5px;
+}
+
+.lastHorizontalColumnHeader{
+  border-top-right-radius: 8px; 
+  -moz-border-radius-topright: 8px;
+  -webkit-border-radius-topright: 8px;
+  padding: 5px;
+}
+
+.firstVerticalColumnHeader{
+  border-top-left-radius: 8px; 
+  -moz-border-radius-topleft: 8px;
+  -webkit-border-radius-topleft: 8px;
+  padding: 5px;
+}
+
+.lastVerticalColumnHeader{
+  border-bottom-left-radius: 8px; 
+  -moz-border-radius-bottomleft: 8px;
+  -webkit-border-radius-bottomleft: 8px;
+  padding: 5px;
+}
+
+td.horizontalData {
+  padding: 5px;
+  vertical-align: top;
+}

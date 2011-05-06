@@ -1,0 +1,41 @@
+<head>
+	<link rel="stylesheet" type="text/css" href="{{ STATIC_PREFIX }}dvdogs.css" />
+</head>
+<body>
+<table>
+{% for trip in trip_list %}
+  <tr>
+    <td>
+		<div class="roundedTitleArea">
+			<a href="/trips/{{ trip.id }}/">{{trip.date }} - {{ trip.name}}</a>
+
+		</div>
+		<div class="roundedTextArea"><div class="roundedTextAreaHeightFixer"></div>
+	      <table><tr>
+		<td class="hikeListForTripList">
+	          {% for hike in trip.hike_set.all %}
+				<li>{{ hike.name }}</li>
+				<br class = "clear">
+	          {% endfor %}  
+			<div class="clear"></div>
+		</td>
+		<td class="storyListForTripList">
+				{% for tstory in trip.trip_story_set.all %}
+					<a href="/trip_stories/{{ tstory.id }}/">{{tstory.name}}</a>
+				{% endfor %}
+				{% for hike in trip.hike_set.all %}
+					{% for hstory in hike.hike_story_set.all %}
+						<a href="/hike_stories/{{ hstory.id }}/">{{hstory.name}}</a>
+					{% endfor %}
+				{% endfor %}
+		</td>
+		</tr></table>
+		</div>   
+
+	</td>
+    <td>
+    </td>
+  </tr>
+{% endfor %}
+</table>
+</body>
