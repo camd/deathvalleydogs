@@ -8,9 +8,7 @@ Install requirements
 
 1. Make sure python is intalled (I use 2.7)
 
-2. Install virtualenv, virtualenvwrapper and pip::
-
-    http://jamiecurle.com/posts/installing-pip-virtualenv-and-virtualenvwrapper-on-os-x/
+2. Install virtualenv, virtualenvwrapper and pip.  Good instructions for OS X are at: http://jamiecurle.com/posts/installing-pip-virtualenv-and-virtualenvwrapper-on-os-x/
 
 3. create a virtualenv and enable it::
 
