@@ -223,23 +223,38 @@
     font-size: xx-large;
   }
 
-	/* hike story content */
+/* writeup list */
+
+    .writeup_list_item {
+        float: left;
+        padding: 8px;
+    }
+    .writeup_list_image {
+        float: left;
+        width: 150px;
+        height: 150px;
+    }
+    .writeup_list_text_box {
+        float: left;
+    }
+
+	/* writeup content */
 	
 	.singleStory {
-    clear: both;
+        clear: both;
 	}
 
-  .shortDescriptionTextArea {
-    -moz-border-radius: 15px;
-    -webkit-border-radius: 15px; 
-    border-radius: 15px; 
-    border: 3px solid maroon;
-    padding: 12px;
-    background: beige;
-    color: black;
-    clear: both;
-    height: 100%;
-    width: 250px;
+   .roundedTitleArea {
+     border-top-left-radius: 15px; 
+     border-top-right-radius: 15px; 
+     -moz-border-radius-topleft: 15px;
+     -moz-border-radius-topright: 15px;
+     -webkit-border-radius-topleft: 15px; 
+     -webkit-border-radius-topright: 15px; 
+     padding: 8px;
+     background: maroon;
+     color: beige;
+     width: 800px;
    }
 
   .roundedTextArea {
@@ -254,15 +269,28 @@
     background: beige;
     color: black;
     clear: both;
-    width: 400px;
+    width: 782px;
     font-size: small;
    }
   
   .roundedTextAreaHeightFixer {
     height:50px;
     float:right;
-    width:1px;
+    width:500px;
   }
+
+  .shortDescriptionTextArea {
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px; 
+    border-radius: 15px; 
+    border: 3px solid maroon;
+    padding: 12px;
+    background: beige;
+    color: black;
+    clear: both;
+    height: 100%;
+    width: 250px;
+   }
 
   .hikeListForTripList {
 	width: 150px;
@@ -272,18 +300,6 @@
 	width: 200px;
   }
 
-  .roundedTitleArea {
-    border-top-left-radius: 15px; 
-    border-top-right-radius: 15px; 
-    -moz-border-radius-topleft: 15px;
-    -moz-border-radius-topright: 15px;
-    -webkit-border-radius-topleft: 15px; 
-    -webkit-border-radius-topright: 15px; 
-    padding: 8px;
-    background: maroon;
-    color: beige;
-    width: 418px;
-  }
 
   .clear { 
 	clear: both; 
