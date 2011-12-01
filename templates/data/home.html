@@ -1,0 +1,26 @@
+{% extends "data/base.html" %}
+
+{% block title %}Death Valley Dogs{% endblock %}
+{% block content %}
+
+    <div class = "roundedTextArea" id="latest_writeups">
+        {% include "data/writeup_box.html" with writeups=latest_writeups %}
+        
+        {% if latest_writeups %}
+            <ul>
+            {% for writeup in latest_writeups %}
+                <li><a href="/data/writeup/{{ writeup.id }}/">{{ writeup.short_desc }}</a></li>
+            {% endfor %}
+            </ul>
+        {% else %}
+            <p>No writeups are available.</p>
+        {% endif %}    
+    </div>
+
+    <div id="last_trip">
+    </div>
+
+    <div id="next_trip">
+    </div>
+
+{% endblock %}

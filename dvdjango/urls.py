@@ -13,8 +13,8 @@ urlpatterns = patterns('',
     # (r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     # Uncomment the next line to enable the admin:
-    (r'^trips/', include('data.urls')),
     (r'^admin/', include(admin.site.urls)),
+    (r'^info/', include('dvdjango.data.urls')),
 
 	# Required to make static serving work
 #	(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+	<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/dvdogs.css" media="screen, projection"/>
+	<title>{% block title %}Death Valley Dogs{% endblock %}</title>
+</head>
+<body>
+
+<div id="mainImageHeader">
+  <div id="header">
+    <ul>
+      <li id="home" class="tab"><a href="/info/home">Home</a></li>
+      <li id="trips" class="tab"><a href="/info/trips">Trips</a></li>
+      <li id="dogs" class="tab"><a href="/info/dogs">Dogs</a></li>
+      <li id="photos" class="link_away"><a href="http://photos.deathvalleydogs.com"target="_blank">Photos</a></li>
+      <li id="forum" class="link_away"><a href="http://forum.deathvalleydogs.com"target="_blank">Forum</a></li>
+    </ul>
+  </div>
+  <div id="content">
+  {% block content %}{% endblock %}
+  </div>
+</div>
+
+
+<script>
+	function makeSelected() {
+		var idName = "#{{ selected_top_tab }}";
+
+		if ($(idName).hasClass("tab")) {
+			$(idName).removeClass("tab");
+			$(idName).addClass("selected_tab");
+		}
+
+	}
+
+	$(document).ready(makeSelected());
+	
+</script>

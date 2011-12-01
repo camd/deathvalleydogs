@@ -38,7 +38,7 @@ class Trip(ModelBase):
 	name = models.CharField(max_length=200)
 	date = models.DateField()
 	end_date = models.DateField(null=True)
-	map_points = models.TextField(null=True)
+	map_points = models.TextField(null=True, default="<kml></kml>")
 
 	def __unicode__(self):
 		return self.name
@@ -48,24 +48,15 @@ class Hike(ModelBase):
 	dogs = models.ManyToManyField(Dog)
 	name = models.CharField(max_length=200)
 	date = models.DateField()
-	map_points = models.TextField(null=True)
+	map_points = models.TextField(null=True, default="<kml></kml>")
 
 	def __unicode__(self):
 		return self.name
 
-class TripWriteup(ModelBase):
+class Writeup(ModelBase):
 	dog = models.ForeignKey(Dog)
 	trip = models.ForeignKey(Trip)
-	name = models.CharField(max_length=200)
-	short_desc = models.CharField(max_length=200)
-	body = models.TextField()
-
-	def __unicode__(self):
-		return self.name
-
-class HikeWriteup(ModelBase):
-	dog = models.ForeignKey(Dog)
-	hike = models.ForeignKey(Hike)
+	hike = models.ForeignKey(Hike, blank=True, null=True)
 	name = models.CharField(max_length=200)
 	short_desc = models.CharField(max_length=200)
 	body = models.TextField()

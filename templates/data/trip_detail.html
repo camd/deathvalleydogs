@@ -1,0 +1,59 @@
+{% extends "data/base.html" %}
+
+{% block title %}{{ trip }}{% endblock %}
+{% block content %}
+<h1>{{ trip }}</h1>
+<div class="trip_date">{{ trip.date }}</div>  
+<div id="trip_detail">
+    <div class="dog_list">
+        <p>Dogs:</p>    
+            <ul>
+            {% for dog in trip.dogs.all %}
+                <li>{{ dog.name }}</li>
+            {% endfor %}
+            </ul>
+    </div>
+    <div class="rig_list">
+        <p>Rigs:</p>    
+            <ul>
+            {% for rig in trip.rigs.all %}
+                <li>{{ rig.name }}</li>
+            {% endfor %}
+            </ul>
+    </div>
+    <div class="hike_list">
+        <p>Hikes:</p>    
+            <ul>
+            {% for hike in trip.hike_set.all %}
+                <li>{{ hike.name }}</li>
+            {% endfor %}
+            </ul>
+    </div>
+    <div class="writeup_list">
+        <p>Writeups:</p>    
+            <ul>
+            {% for hike in trip.hike_set.all %}
+                <li>{{ hike.name }}</li>
+            {% endfor %}
+            </ul>
+    </div>
+    <div class="weather">
+        <p>Writeups:</p>    
+            <ul>
+            {% for hike in trip.hike_set.all %}
+                <li>{{ hike.name }}</li>
+            {% endfor %}
+            </ul>
+    </div>
+    <div class="map">
+        <p>Map:</p>    
+        <INPUT TYPE="button" value="Open in Google Earth" onClick="location.href=getMapKml('trips', <%= @trip.id %>)">
+        <div id="map_canvas"></div>
+
+        <script language="javascript" type="text/javascript">
+          $("#map_canvas").load(initialize_map('trips', {{ trip.id }}));
+        </script>
+    </div>
+
+</div>
+{% endblock %}

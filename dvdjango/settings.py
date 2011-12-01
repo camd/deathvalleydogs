@@ -1,10 +1,14 @@
 # Django settings for dvdjango project.
 
+from os.path import dirname, join
+
+BASE_PATH = dirname(dirname(__file__))
+
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    # ('Your Name', 'your_email@domain.com'),
+    ('Cameron Dawson', 'cameron@dawsoncode.com'),
 )
 
 MANAGERS = ADMINS
@@ -27,7 +31,7 @@ DATABASES = {
 # timezone as the operating system.
 # If running in a Windows environment this must be set to the same as your
 # system time zone.
-TIME_ZONE = 'America/Chicago'
+TIME_ZONE = None
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
@@ -37,11 +41,30 @@ SITE_ID = 1
 
 # If you set this to False, Django will make some optimizations so as not
 # to load the internationalization machinery.
-USE_I18N = True
+USE_I18N = False
 
 # If you set this to False, Django will not format dates, numbers and
 # calendars according to the current locale
-USE_L10N = True
+USE_L10N = False
+
+# Absolute path to the directory that holds static files.
+# Example: "/home/media/media.lawrence.com/static/"
+STATIC_ROOT = join(BASE_PATH, "collected-assets")
+
+# URL that handles the static files served from STATIC_ROOT.
+# Example: "http://media.lawrence.com/static/"
+STATIC_URL = "/static/"
+
+# A list of locations of additional static files
+STATICFILES_DIRS = [join(BASE_PATH, "static"),
+					"/Users/camerondawson/Dropbox/gitspace/deathvalleydogs/static"]
+
+# List of finder classes that know how to find static files in
+# various locations.
+STATICFILES_FINDERS = [
+    "django.contrib.staticfiles.finders.FileSystemFinder",
+    "django.contrib.staticfiles.finders.AppDirectoriesFinder",
+]
 
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
@@ -55,9 +78,7 @@ MEDIA_URL = ''
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
 # trailing slash.
 # Examples: "http://foo.com/media/", "/media/".
-ADMIN_MEDIA_PREFIX = '/media/'
-
-STATIC_URL = '/static/'
+ADMIN_MEDIA_PREFIX = '/static/admin/'
 
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = 'jc*x!+&as8yf$y2qn1)*f-owgh#x&14z3&rp!!b#s9x5%4ajhc'
@@ -83,7 +104,7 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-	"/Users/camerondawson/Dropbox/gitspace/dvdogs_site/dvdjango/templates"
+    join(BASE_PATH, "templates"),
 )
 
 INSTALLED_APPS = (
@@ -92,11 +113,10 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.messages',
-	#'django.contrib.staticfiles',
-    # Uncomment the next line to enable the admin:
+	'django.contrib.staticfiles',
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     #'django.contrib.admindocs',
-	'data',
+	'dvdjango.data',
 	'south'
 )

@@ -1,0 +1,30 @@
+
+<table>
+{% for writeup in writeups %}
+
+
+  <tr>
+    <td>
+        {% if writeup.photo %}
+          <img></img>
+        {% else %}
+          img goes here
+        {% endif %}
+    </td>
+    <td>
+      <div class="roundedTitleArea">
+        {{ writeup.name }} - {{ writeup.trip }}<br>
+        by {{ writeup.dog.name }}
+      </div>
+      <div class="roundedTextArea"><div class="roundedTextAreaHeightFixer"></div>
+      {% if writeup.short_desc %}
+        {{ writeup.short_desc }}
+      {% endif %}   
+		<div class="clear"></div>
+      </div>   
+    </td>
+  </tr>
+{% endfor %}
+</table>
+
+<br />

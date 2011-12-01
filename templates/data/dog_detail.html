@@ -1,0 +1,41 @@
+{% extends "data/base.html" %}
+
+{% block title %}{{ dog }}{% endblock %}
+{% block content %}
+<h1>{{ dog }}</h1>
+<div id="dog_detail">
+    <div class="dog_personal_info">
+        <ul>
+            <li><div class="label">Age: </div><div class="pers_value">{{ age }}</div></li>
+            <li><div class="label">Ham: </div><div class="pers_value">{{ dog.ham }}</div></li>
+        </ul>
+    </div>
+    <div class="rig_list">
+        <p>Rigs:</p>    
+            <ul>
+            {% for rig in dog.rig_set.all %}
+                <li>{{ rig.name }}</li>
+            {% endfor %}
+            </ul>
+    </div>
+    <div class="trip_list">
+        <p>Trips:</p>    
+            <ul>
+            {% for trip in dog.trip_set.all %}
+                <li>{{ trip.name }}</li>
+            {% endfor %}
+            </ul>
+    </div>
+    <div class="hike_list">
+        <p>Hikes:</p>    
+            <ul>
+            {% for hike in dog.hike_set.all %}
+                <li>{{ hike.name }}</li>
+            {% endfor %}
+            </ul>
+    </div>
+
+
+</div>
+{% endblock %}
+
