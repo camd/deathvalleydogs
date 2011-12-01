@@ -22,12 +22,11 @@ Install requirements
 
     pip install django mysql-python south ipython
 
-Run the dev server
-------------------
+6. Run the dev server::
 
     ./manage.py runserver
 
-Access the site on localhost
-----------------------------
+7. Access the site on localhost::
 
-localhost:8000/info/home
+    localhost:8000/info/home
+
