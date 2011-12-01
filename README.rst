@@ -3,23 +3,25 @@ Copyright (c) 2011 Cameron Dawson
 
 It's all open source and stuff.  I'll add a license later when I get around to it.
 
-To run this in dev mode
-=======================
-
 Install requirements
 --------------------
 
 1. Make sure python is intalled (I use 2.7)
-2. Install virtualenv, virtualenvwrapper and pip
-   http://jamiecurle.com/posts/installing-pip-virtualenv-and-virtualenvwrapper-on-os-x/
-    
-3. create a virtualenv and enable it:
+
+2. Install virtualenv, virtualenvwrapper and pip::
+
+    http://jamiecurle.com/posts/installing-pip-virtualenv-and-virtualenvwrapper-on-os-x/
+
+3. create a virtualenv and enable it::
+
     mkvirtualenv dvdogs
 
-4. in the future, to enable this virtualenv, you can just say: 
+4. in the future, to enable this virtualenv, you can just say:: 
+
     workon dvdogs
 
-5. install required python packages:
+5. install required python packages::
+
     pip install django mysql-python south ipython
 
 Run the dev server
