@@ -14,7 +14,7 @@
         <p>Rigs:</p>    
             <ul>
             {% for rig in dog.rig_set.all %}
-                <li>{{ rig.name }}</li>
+                <li><a href="/info/rigs/{{ rig.id }}">{{ rig.name }}</a></li>
             {% endfor %}
             </ul>
     </div>
@@ -22,7 +22,7 @@
         <p>Trips:</p>    
             <ul>
             {% for trip in dog.trip_set.all %}
-                <li>{{ trip.name }}</li>
+                <li><a href="/info/trips/{{ trip.id }}">{{ trip.name }}</a></li>
             {% endfor %}
             </ul>
     </div>
@@ -30,7 +30,7 @@
         <p>Hikes:</p>    
             <ul>
             {% for hike in dog.hike_set.all %}
-                <li>{{ hike.name }}</li>
+                <li><a href="/info/hikes/{{ hike.id }}">{{ hike.name }}</a></li>
             {% endfor %}
             </ul>
     </div>

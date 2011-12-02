@@ -14,8 +14,7 @@
 	      <table><tr>
 		<td class="hikeListForTripList">
 	          {% for hike in trip.hike_set.all %}
-				<li>{{ hike.name }}</li>
-				<br class = "clear">
+				<li><a href="/info/hikes/{{ hike.id }}">{{ hike.name }}</a></li>
 	          {% endfor %}  
 			<div class="clear"></div>
 		</td>

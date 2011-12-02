@@ -9,7 +9,7 @@
         <p>Dogs:</p>    
             <ul>
             {% for dog in trip.dogs.all %}
-                <li>{{ dog.name }}</li>
+                <li><a href="/info/dogs/{{ dog.id }}">{{ dog.name }}</a></li>
             {% endfor %}
             </ul>
     </div>
@@ -17,7 +17,7 @@
         <p>Rigs:</p>    
             <ul>
             {% for rig in trip.rigs.all %}
-                <li>{{ rig.name }}</li>
+                <li><a href="/info/rigs/{{ rig.id }}">{{ rig.name }}</a></li>
             {% endfor %}
             </ul>
     </div>
@@ -25,25 +25,15 @@
         <p>Hikes:</p>    
             <ul>
             {% for hike in trip.hike_set.all %}
-                <li>{{ hike.name }}</li>
+                <li><a href="/info/hikes/{{ hike.id }}">{{ hike.name }}</a></li>
             {% endfor %}
             </ul>
     </div>
     <div class="writeup_list">
         <p>Writeups:</p>    
-            <ul>
-            {% for hike in trip.hike_set.all %}
-                <li>{{ hike.name }}</li>
-            {% endfor %}
-            </ul>
+        {% include "data/writeup_box.html" with writeups=trip.writeup_set.all %}
     </div>
     <div class="weather">
-        <p>Writeups:</p>    
-            <ul>
-            {% for hike in trip.hike_set.all %}
-                <li>{{ hike.name }}</li>
-            {% endfor %}
-            </ul>
     </div>
     <div class="map">
         <p>Map:</p>    

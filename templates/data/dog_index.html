@@ -7,16 +7,20 @@
   <div class="dogCube">
     <div class="dogImages">
 
-      <%= link_to image_tag(dog.photo.url(:thumb), :class => "dogThumb"), dog %>
+      <a href="/info/dogs/{{ dog.id }}/"><img src=""></img></a>
 
       <div>
         <div class="dogPrint">
-          <%= dog.family == "Hominid" ? boots_icon_white("centeredPrint") : paws_icon_white("centeredPrint") %>
+            {% if dog.family == "Hominid" %}
+            boot img
+            {% else %}
+            paws img
+            {% endif %}
         </div>
       </div>
     </div>
     <div class="dogName">
-      {{ dog.name }}
+      <a href="/info/dogs/{{ dog.id }}">{{ dog.name }}</a>
     </div>
   </div>
 {% endfor %}

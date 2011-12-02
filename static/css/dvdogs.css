@@ -229,6 +229,10 @@
         float: left;
         padding: 8px;
     }
+    .writeup_list_item:hover {
+        background: beige;
+        cursor: hand;
+    }
     .writeup_list_image {
         float: left;
         width: 150px;
