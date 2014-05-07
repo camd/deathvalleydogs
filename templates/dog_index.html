@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Death Valley Dogs{% endblock %}
+{% block content %}
+<div class="dogCubeContainer">
+{% for dog in dog_list %}
+  <div class="dogCube">
+    <div class="dogImages">
+
+      <a href="/dogs/{{ dog.id }}/"><img src=""></img></a>
+
+      <div class="dogPrint">
+            {% if dog.family == "Hominid" %}
+                <img src="{{ STATIC_URL }}img/dog-boot-print-white.png"></img>
+            {% else %}
+                <img src="{{ STATIC_URL }}img/dog-paw-print-white.gif"></img>
+            {% endif %}
+      </div>
+    </div>
+    <div class="dogName">
+      <a href="/dogs/{{ dog.id }}">{{ dog.name }}</a>
+    </div>
+  </div>
+{% endfor %}
+</div>
+<div style="clear:both;"></div>
+{% endblock %}

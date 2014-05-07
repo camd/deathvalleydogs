@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}{{ hike }}{% endblock %}
+{% block content %}
+<h1>{{ hike }}</h1>
+<div class="hike_date">{{ hike.date }}</div>
+<div id="hike_detail" class="detail_page">
+    <div class="dog_list">
+        <p>Dogs:</p>
+            <ul>
+            {% for dog in hike.dogs.all %}
+                <li><a href="/dogs/{{ dog.id }}">{{ dog.name }}</a></li>
+            {% endfor %}
+            </ul>
+    </div>
+    <div class="map">
+        <p>Map:</p>
+        <INPUT TYPE="button" value="Open in Google Earth" onClick="location.href=getMapKml('hikes', <%= @hike.id %>)">
+        <div id="map_canvas"></div>
+
+        <script language="javascript" type="text/javascript">
+          $("#map_canvas").load(initialize_map('hikes', {{ hike.id }}));
+        </script>
+    </div>
+
+</div>
+{% endblock %}

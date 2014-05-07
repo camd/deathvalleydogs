@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Death Valley Dogs{% endblock %}
+{% block content %}
+<div class="listOfTrips">
+{% for trip in trip_list %}
+		<div class="listItem">
+            <div class="roundedTitleArea">
+                <a href="/trips/{{ trip.id }}/">{{trip.date }} - {{ trip.name}}</a>
+
+            </div>
+            <div class="roundedTextArea"><div class="roundedTextAreaHeightFixer"></div>
+                <div class="indexItemListHeader"><strong>Hikes</strong></div>
+                <div class="hikeListForTripList">
+                      {% for hike in trip.hike_set.all %}
+                        <li><a href="/hikes/{{ hike.id }}">{{ hike.name }}</a></li>
+                      {% endfor %}
+                    <div class="clear"></div>
+                </div>
+                <div class="indexItemListHeader"><strong>Writeups</strong></div>
+                <div class="writeupListForTripList">
+                      {% for writeup in trip.writeup_set.all %}
+                        <li><a href="/writeups/{{ writeup.id }}">{{ writeup.name }}</a></li>
+                      {% endfor %}
+                </div>
+            </div>
+        </div>
+{% endfor %}
+</div>
+{% endblock %}

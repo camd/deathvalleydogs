@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Death Valley Dogs{% endblock %}
+{% block content %}
+
+    <div id="latest_writeups">
+        {% include "writeup_box.html" with writeups=latest_writeups %}
+    </div>
+
+    <div id="last_trip">
+    </div>
+
+    <div id="next_trip">
+    </div>
+
+{% endblock %}

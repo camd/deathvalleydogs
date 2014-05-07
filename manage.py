@@ -1,17 +1,10 @@
 #!/usr/bin/env python
-"""
-Runs a Django management command.
+import os
+import sys
 
-Avoids the double-settings-import and extra sys.path additions of Django's
-default manage.py.
+if __name__ == "__main__":
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "deathvalleydogs.settings")
 
-"""
-import os, sys
+    from django.core.management import execute_from_command_line
 
-sys.path.insert(0, os.path.dirname(__file__))
-
-os.environ["DJANGO_SETTINGS_MODULE"] = "dvdjango.settings"
-
-from django.core.management import execute_from_command_line
-
-execute_from_command_line(sys.argv)
+    execute_from_command_line(sys.argv)
