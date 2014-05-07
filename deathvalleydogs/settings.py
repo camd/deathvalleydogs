@@ -64,13 +64,24 @@ TEMPLATE_DIRS = (
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.mysql",
-        "NAME": "deathvalleydogs",
-        "USER": "root",
-        "PASSWORD": "",
+        "NAME": "deathval_dvdjango",
+        "USER": "deathval_dvdjango",
+        "PASSWORD": "funerals",
         "HOST": "localhost",
         "PORT": "",
     }
 }
+
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.mysql",
+#         "NAME": "deathvalleydogs",
+#         "USER": "root",
+#         "PASSWORD": "",
+#         "HOST": "localhost",
+#         "PORT": "",
+#     }
+# }
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
