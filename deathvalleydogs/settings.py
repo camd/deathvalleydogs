@@ -64,9 +64,9 @@ TEMPLATE_DIRS = (
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.mysql",
-        "NAME": "deathval_dvdjango",
-        "USER": "deathval_dvdjango",
-        "PASSWORD": "funerals",
+        "NAME": "deathvalleydogs",
+        "USER": "adminfRSatF4",
+        "PASSWORD": "i-v_gwUGSBqy",
         "HOST": "localhost",
         "PORT": "",
     }
