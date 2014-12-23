@@ -105,7 +105,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, "collected-assets")
 #STATICFILES_DIRS = [os.path.join(BASE_DIR, "static"),
 #					"/Users/camerondawson/Dropbox/gitspace/deathvalleydogs/static"]
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static"),
-					"~/deathvalleydogs.com/deathvalleydogs/static"]
+					"static"]
 
 STATICFILES_FINDERS = [
     "django.contrib.staticfiles.finders.FileSystemFinder",
