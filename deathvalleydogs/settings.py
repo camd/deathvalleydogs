@@ -65,8 +65,8 @@ DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.mysql",
         "NAME": "deathvalleydogs",
-        "USER": "adminfRSatF4",
-        "PASSWORD": "i-v_gwUGSBqy",
+        "USER": "root",
+        "PASSWORD": "badwater",
         "HOST": "localhost",
         "PORT": "",
     }
