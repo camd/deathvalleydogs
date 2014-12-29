@@ -11,7 +11,7 @@
 		margin: 0;
 		padding: 0;
         height: 100%;
-        background: url('../img/tile-topo-blk-trans.png');
+        background: url('../img/tile-topo-blk-trans-gray.png');
 	}
 
 	p   {
@@ -265,7 +265,6 @@
 
     .detail_page {
         width: 900px;
-        background: white;
         margin: 35px;
         padding: 15px;
         height: 100%;
@@ -285,9 +284,11 @@
      -webkit-border-radius-topleft: 15px;
      -webkit-border-radius-topright: 15px;
      padding: 8px;
-     background: maroon;
-     color: beige;
-     width: 800px;
+     background: lightgray;
+     border: 5px solid maroon;
+     border-bottom: 0;
+     color: maroon;
+     width: 790px;
    }
 
   .roundedTextArea {
@@ -342,13 +343,13 @@
 
 
   .roundedTitleArea a:link {
-    color: beige;
+    color: maroon;
     font-weight: bold;
     text-decoration: underline
   }
 
   .roundedTitleArea a:visited {
-    color: beige;
+    color: maroon;
     text-decoration: underline
   }
 

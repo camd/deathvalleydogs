@@ -1,3 +1,3 @@
-from home import *
-from trip import *
-from dog import *
+#from home import *
+# from dog import *
+# from trip import *

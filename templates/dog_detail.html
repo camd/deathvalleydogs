@@ -21,7 +21,7 @@
     <div class="trip_list">
         <p>Trips:</p>
             <ul>
-            {% for trip in dog.trip_set.all %}
+            {% for trip in dog.trips.all %}
                 <li><a href="/trips/{{ trip.id }}">{{ trip.name }}</a></li>
             {% endfor %}
             </ul>
@@ -29,7 +29,7 @@
     <div class="hike_list">
         <p>Hikes:</p>
             <ul>
-            {% for hike in dog.hike_set.all %}
+            {% for hike in dog.hikes.all %}
                 <li><a href="/hikes/{{ hike.id }}">{{ hike.name }}</a></li>
             {% endfor %}
             </ul>

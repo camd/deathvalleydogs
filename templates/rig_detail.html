@@ -15,7 +15,7 @@
     <div class="trip_list">
         <p>Trips:</p>
             <ul>
-            {% for trip in rig.trip_set.all %}
+            {% for trip in rig.trips.all %}
                 <li><a href="/trips/{{ trip.id }}">{{ trip.name }}</a></li>
             {% endfor %}
             </ul>
