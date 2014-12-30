@@ -9,11 +9,12 @@ admin.autodiscover()
 #      url(r'^$', 'deathvalleydogs.views.home', name='home'),
 #     # url(r'^blog/', include('blog.urls')),
 #
-#     url(r'^admin/', include(admin.site.urls)),
 # )
 
 urlpatterns = patterns(
     'deathvalleydogs.views',
+
+    url(r'^admin/', include(admin.site.urls)),
 
     (r'^$', 'home.home'),
     (r'^home/$', 'home.home'),
