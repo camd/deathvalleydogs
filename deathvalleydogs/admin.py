@@ -4,7 +4,6 @@ from django import forms
 from deathvalleydogs.models import Trip, Hike, Dog, Rig, Writeup, Quote
 
 class DogAdminForm(forms.ModelForm):
-    fields = ("name", "ham", "active", "birth_date", "family", "known_for")
     trips = forms.ModelMultipleChoiceField(
         queryset=Trip.objects.all(),
         required=False,
@@ -16,6 +15,7 @@ class DogAdminForm(forms.ModelForm):
 
     class Meta:
         model = Dog
+        fields = ["name", "ham", "active", "birth_date", "family", "known_for"]
 
     def __init__(self, *args, **kwargs):
         super(DogAdminForm, self).__init__(*args, **kwargs)

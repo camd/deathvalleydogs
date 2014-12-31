@@ -13,7 +13,7 @@ class ModelBase(models.Model):
 class Dog(ModelBase):
     name = models.CharField(max_length=200)
     ham = models.CharField(max_length=200)
-    active = models.BooleanField()
+    active = models.BooleanField(default=True)
     birth_date = models.DateField('birth date', null=True)
     family = models.CharField(max_length=20)
     known_for = models.CharField(max_length=300, blank=True)
@@ -28,7 +28,7 @@ class Rig(ModelBase):
     year = models.IntegerField()
     make = models.CharField(max_length=30)
     model = models.CharField(max_length=30)
-    active = models.BooleanField()
+    active = models.BooleanField(default=True)
 
     def __unicode__(self):
         return self.name
